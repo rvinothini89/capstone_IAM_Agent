@@ -51,8 +51,10 @@ IAMAgent/
 │   └── faiss_index/
 │
 ├── data/
-│   └── policies.txt
-│
+│   └── feedback.json  
+|   └── memory_store.json
+│   └── policies.json
+|
 ├── logs/
 │   └── agent.log
 │
@@ -60,12 +62,9 @@ IAMAgent/
 │   └── app.py
 │
 ├── docs/
-│   ├── PHASE6_PLANNING_MEMORY_CONTEXT.md
-│   ├── PHASE7_ADAPTIVE_BEHAVIOR.md
-│   ├── PHASE8_DEPLOYMENT_READINESS.md
-│   ├── PHASE9_EVALUATION_ENGINEERING_REVIEW.md
-│   ├── DEMO_SCRIPT.md
-│   └── ENGINEERING_JUSTIFICATION.md
+│   ├── ProblemStatement.md
+│   ├── Evaluation And Engineering Review.md
+│   ├── DemoScript.md
 │
 ├── requirements.txt
 ├── Dockerfile
