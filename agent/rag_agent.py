@@ -331,11 +331,15 @@ def run_rag_agent(user_input):
     logging.info("Updating conversation state")
     # Always define state first
     current_state = get_state()
-    # 🔴 NEW REQUEST DETECTION
-    keywords = ["qa", "devops", "read", "write", "production", "test"]
+    # NEW REQUEST DETECTION
+    new_session_keywords = [    "new request",
+    "start over",
+    "new session",
+    "reset context"]
 
-    if all(word not in user_input.lower() for word in keywords):
-        # treat as fresh request
+    if any(keyword in user_input.lower() for keyword in new_session_keywords):
+
+        logging.info("New session detected. Clearing memory.")
         clear_memory()
         update_state(user_input)
         current_state = get_state()
