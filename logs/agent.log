@@ -1,0 +1,284 @@
+2026-05-15 14:18:01,221 | INFO | Received request: User logged in from Europe and India within one hour
+2026-05-15 14:18:01,222 | INFO | Updating conversation state
+2026-05-15 14:18:03,031 | INFO | Loading faiss with AVX2 support.
+2026-05-15 14:18:03,089 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 14:18:05,133 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 14:18:05,190 | INFO | Retrieving policy documents
+2026-05-15 14:18:10,406 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 14:18:10,422 | INFO | Request type detected: anomaly_detection
+2026-05-15 14:18:10,424 | INFO | Applying adaptive behavior checks
+2026-05-15 14:18:10,424 | INFO | Selected tool: escalate_to_secops
+2026-05-15 14:18:10,426 | INFO | APPROVED | Risk: high | Reason: User logged in from two different geographical locations (Europe and India) within one hour, indicating potential account compromise or unusual behavior. This matches anomaly detection policies. | User Input: User logged in from Europe and India within one hour
+2026-05-15 14:18:10,426 | WARNING | ESCALATION TRIGGERED | Risk: high | Reason: User logged in from two different geographical locations (Europe and India) within one hour, indicating potential account compromise or unusual behavior. This matches anomaly detection policies. | Tool: escalate_to_secops | User Input: User logged in from Europe and India within one hour
+2026-05-15 14:22:07,263 | INFO | Received request: QA need write access to test DB
+2026-05-15 14:22:07,264 | INFO | Updating conversation state
+2026-05-15 14:22:10,628 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 14:22:10,632 | INFO | Retrieving policy documents
+2026-05-15 14:22:13,494 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 14:22:13,497 | INFO | Request type detected: access_request
+2026-05-15 14:22:13,499 | INFO | Applying adaptive behavior checks
+2026-05-15 14:22:13,499 | INFO | Selected tool: No tool selected
+2026-05-15 14:22:13,501 | INFO | APPROVED | Risk: medium | Reason: Behavior adapted based on previous feedback indicating qa write access to test_db is acceptable. | User Input: QA need write access to test DB
+2026-05-15 14:22:13,502 | INFO | APPROVED | Risk: medium | User Input: QA need write access to test DB
+2026-05-15 14:22:25,520 | INFO | Received request: DEV need read access to test DB
+2026-05-15 14:22:25,520 | INFO | Updating conversation state
+2026-05-15 14:22:29,266 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 14:22:29,270 | INFO | Retrieving policy documents
+2026-05-15 14:22:33,792 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 14:22:33,794 | INFO | Request type detected: access_request
+2026-05-15 14:22:33,797 | INFO | Applying adaptive behavior checks
+2026-05-15 14:22:33,797 | INFO | Selected tool: No tool selected
+2026-05-15 14:22:33,800 | INFO | APPROVED | Risk: low | Reason: As per policy P3, the Developer role is allowed read access to test_db. The risk is low since the access type is read. | User Input: DEV need read access to test DB
+2026-05-15 14:22:33,800 | INFO | APPROVED | Risk: low | User Input: DEV need read access to test DB
+2026-05-15 14:22:52,656 | INFO | Received request: QA need write access to production DB
+2026-05-15 14:22:52,657 | INFO | Updating conversation state
+2026-05-15 14:22:55,273 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 14:22:55,298 | INFO | Retrieving policy documents
+2026-05-15 14:22:59,472 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 14:22:59,475 | INFO | Request type detected: access_request
+2026-05-15 14:22:59,478 | INFO | Applying adaptive behavior checks
+2026-05-15 14:22:59,479 | INFO | Selected tool: request_approval
+2026-05-15 14:22:59,482 | INFO | APPROVED | Risk: high | Reason: As per policy P2, the QA role is only allowed read access to production_db. The requested write access is not permitted, and since production_db is a high-risk resource, this request requires escalation for approval. | User Input: QA need write access to production DB
+2026-05-15 14:22:59,482 | WARNING | ESCALATION TRIGGERED | Risk: high | Reason: As per policy P2, the QA role is only allowed read access to production_db. The requested write access is not permitted, and since production_db is a high-risk resource, this request requires escalation for approval. | Tool: request_approval | User Input: QA need write access to production DB
+2026-05-15 15:07:55,086 | INFO | Received request: simulate failure
+2026-05-15 15:07:55,088 | INFO | Updating conversation state
+2026-05-15 15:07:56,882 | INFO | Loading faiss with AVX2 support.
+2026-05-15 15:07:56,948 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 15:07:59,124 | INFO | HTTP Request: POST https://openai.vocareum.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 15:07:59,193 | INFO | Retrieving policy documents
+2026-05-15 15:07:59,193 | ERROR | Runtime error: Simulated runtime failure | Latency: 4.11s
+2026-05-15 18:23:22,437 | INFO | Received request: use delete database tool
+2026-05-15 18:23:22,438 | INFO | Updating conversation state
+2026-05-15 18:29:48,429 | INFO | Received request: use delete database tool
+2026-05-15 18:29:48,429 | INFO | Updating conversation state
+2026-05-15 18:29:48,430 | ERROR | SECURITY VIOLATION DETECTED | Unsafe Request: use delete database tool
+2026-05-15 18:30:05,713 | INFO | Received request: QA need write access to test DB
+2026-05-15 18:30:05,713 | INFO | Updating conversation state
+2026-05-15 18:30:06,403 | INFO | Loading faiss with AVX2 support.
+2026-05-15 18:30:06,483 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 18:30:07,997 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 18:30:08,014 | INFO | Retrieving policy documents
+2026-05-15 18:30:11,578 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 18:30:11,587 | INFO | Request type detected: access_request
+2026-05-15 18:30:11,587 | INFO | Applying adaptive behavior checks
+2026-05-15 18:30:11,588 | INFO | Selected tool: No tool selected
+2026-05-15 18:30:11,588 | INFO | APPROVED | Risk: medium | Reason: Behavior adapted based on previous feedback indicating qa write access to test_db is acceptable. | User Input: QA need write access to test DB
+2026-05-15 18:30:11,588 | INFO | APPROVED | Risk: medium | User Input: QA need write access to test DB
+2026-05-15 18:47:14,450 | INFO | Received request: I need access
+2026-05-15 18:47:14,451 | INFO | Updating conversation state
+2026-05-15 18:47:15,074 | INFO | Loading faiss with AVX2 support.
+2026-05-15 18:47:15,094 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 18:47:16,662 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 18:47:16,665 | INFO | Retrieving policy documents
+2026-05-15 18:47:20,244 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 18:47:20,249 | INFO | Request type detected: access_request
+2026-05-15 18:47:20,250 | INFO | Applying adaptive behavior checks
+2026-05-15 18:47:20,250 | INFO | Selected tool: ask_user_details
+2026-05-15 18:47:20,251 | INFO | APPROVED | Risk: unknown | Reason: Role and access type are missing, which are required to evaluate the access request against the policies. | User Input: I need access
+2026-05-15 18:47:20,251 | WARNING | REQUEST_CLARIFICATION | Risk: unknown | Reason: Role and access type are missing, which are required to evaluate the access request against the policies. | User Input: I need access
+2026-05-15 18:48:07,346 | INFO | Received request: QA
+2026-05-15 18:48:07,347 | INFO | Updating conversation state
+2026-05-15 18:48:08,196 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 18:48:08,197 | INFO | Retrieving policy documents
+2026-05-15 18:48:11,032 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 18:48:11,033 | INFO | Request type detected: access_request
+2026-05-15 18:48:11,033 | INFO | Applying adaptive behavior checks
+2026-05-15 18:48:11,033 | INFO | Selected tool: ask_user_details
+2026-05-15 18:48:11,034 | INFO | APPROVED | Risk: unknown | Reason: Access type is missing, which is required to evaluate the access request against the policies. | User Input: QA
+2026-05-15 18:48:11,034 | WARNING | REQUEST_CLARIFICATION | Risk: unknown | Reason: Access type is missing, which is required to evaluate the access request against the policies. | User Input: QA
+2026-05-15 18:49:06,020 | INFO | Received request: write access
+2026-05-15 18:49:06,020 | INFO | Updating conversation state
+2026-05-15 18:49:07,863 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 18:49:07,864 | INFO | Retrieving policy documents
+2026-05-15 18:49:10,959 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 18:49:10,964 | INFO | Request type detected: access_request
+2026-05-15 18:49:10,965 | INFO | Applying adaptive behavior checks
+2026-05-15 18:49:10,965 | INFO | Selected tool: ask_user_details
+2026-05-15 18:49:10,965 | INFO | APPROVED | Risk: medium | Reason: Access type is unclear; while 'write access' was mentioned, it needs to be explicitly stated as the access type for evaluation against policies. | User Input: write access
+2026-05-15 18:49:10,965 | WARNING | REQUEST_CLARIFICATION | Risk: medium | Reason: Access type is unclear; while 'write access' was mentioned, it needs to be explicitly stated as the access type for evaluation against policies. | User Input: write access
+2026-05-15 18:59:17,887 | INFO | Received request: I need access
+2026-05-15 18:59:17,887 | INFO | Updating conversation state
+2026-05-15 18:59:18,523 | INFO | Loading faiss with AVX2 support.
+2026-05-15 18:59:18,543 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 18:59:19,043 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 18:59:19,045 | INFO | Retrieving policy documents
+2026-05-15 18:59:22,343 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 18:59:22,348 | INFO | Request type detected: access_request
+2026-05-15 18:59:22,348 | INFO | Applying adaptive behavior checks
+2026-05-15 18:59:22,348 | INFO | Selected tool: ask_user_details
+2026-05-15 18:59:22,349 | INFO | APPROVED | Risk: unknown | Reason: Role and access type are missing, which are required to evaluate the access request against the policies. | User Input: I need access
+2026-05-15 18:59:22,349 | WARNING | REQUEST_CLARIFICATION | Risk: unknown | Reason: Role and access type are missing, which are required to evaluate the access request against the policies. | User Input: I need access
+2026-05-15 18:59:31,187 | INFO | Received request: QA
+2026-05-15 18:59:31,187 | INFO | Updating conversation state
+2026-05-15 18:59:33,000 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 18:59:33,001 | INFO | Retrieving policy documents
+2026-05-15 18:59:36,064 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 18:59:36,065 | INFO | Request type detected: access_request
+2026-05-15 18:59:36,066 | INFO | Applying adaptive behavior checks
+2026-05-15 18:59:36,066 | INFO | Selected tool: ask_user_details
+2026-05-15 18:59:36,067 | INFO | APPROVED | Risk: unknown | Reason: Access type is missing, which is required to evaluate the access request against the policies. | User Input: QA
+2026-05-15 18:59:36,067 | WARNING | REQUEST_CLARIFICATION | Risk: unknown | Reason: Access type is missing, which is required to evaluate the access request against the policies. | User Input: QA
+2026-05-15 18:59:50,106 | INFO | Received request: write access
+2026-05-15 18:59:50,106 | INFO | Updating conversation state
+2026-05-15 18:59:51,322 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 18:59:51,323 | INFO | Retrieving policy documents
+2026-05-15 18:59:53,368 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 18:59:53,369 | INFO | Request type detected: access_request
+2026-05-15 18:59:53,370 | INFO | Applying adaptive behavior checks
+2026-05-15 18:59:53,370 | INFO | Selected tool: request_approval
+2026-05-15 18:59:53,370 | INFO | APPROVED | Risk: high | Reason: All required attributes recovered from memory state. Production access requires approval. | User Input: write access
+2026-05-15 18:59:53,370 | WARNING | ESCALATION TRIGGERED | Risk: high | Reason: All required attributes recovered from memory state. Production access requires approval. | Tool: request_approval | User Input: write access
+2026-05-15 19:01:56,507 | INFO | Received request: QA need write access to test DB
+2026-05-15 19:01:56,507 | INFO | Updating conversation state
+2026-05-15 19:01:57,575 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:01:57,577 | INFO | Retrieving policy documents
+2026-05-15 19:02:00,444 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:02:00,445 | INFO | Request type detected: access_request
+2026-05-15 19:02:00,446 | INFO | Applying adaptive behavior checks
+2026-05-15 19:06:34,963 | INFO | Received request: write access
+2026-05-15 19:06:34,963 | INFO | Updating conversation state
+2026-05-15 19:06:35,605 | INFO | Loading faiss with AVX2 support.
+2026-05-15 19:06:35,625 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 19:06:36,199 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:06:36,201 | INFO | Retrieving policy documents
+2026-05-15 19:06:40,908 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:06:40,913 | INFO | Request type detected: access_request
+2026-05-15 19:06:40,914 | INFO | Applying adaptive behavior checks
+2026-05-15 19:13:46,703 | INFO | Received request: write access
+2026-05-15 19:13:46,703 | INFO | Updating conversation state
+2026-05-15 19:13:47,336 | INFO | Loading faiss with AVX2 support.
+2026-05-15 19:13:47,356 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 19:13:48,109 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:13:48,111 | INFO | Retrieving policy documents
+2026-05-15 19:13:50,873 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:13:50,877 | INFO | Request type detected: access_request
+2026-05-15 19:13:50,878 | INFO | Applying adaptive behavior checks
+2026-05-15 19:13:50,879 | INFO | APPROVED | Risk: medium | Reason: As per policy P2, QA role is allowed read access to production_db, but write access requires approval. Since the request is for write access on a high-risk resource (production_db), it must be escalated for approval. | User Input: write access
+2026-05-15 19:13:50,879 | WARNING | ESCALATION TRIGGERED | Risk: medium | Reason: As per policy P2, QA role is allowed read access to production_db, but write access requires approval. Since the request is for write access on a high-risk resource (production_db), it must be escalated for approval. | Tool: request_approval | User Input: write access
+2026-05-15 19:14:02,942 | INFO | Received request: QA need write access to production db
+2026-05-15 19:14:02,942 | INFO | Updating conversation state
+2026-05-15 19:14:04,184 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:14:04,186 | INFO | Retrieving policy documents
+2026-05-15 19:14:06,949 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:14:06,950 | INFO | Request type detected: access_request
+2026-05-15 19:14:06,951 | INFO | Applying adaptive behavior checks
+2026-05-15 19:14:06,952 | INFO | APPROVED | Risk: high | Reason: As per policy P2, the QA role is allowed read access to production_db, but write access requires approval. Since the request is for write access on a high-risk resource (production_db), it must be escalated for approval. | User Input: QA need write access to production db
+2026-05-15 19:14:06,952 | WARNING | ESCALATION TRIGGERED | Risk: high | Reason: As per policy P2, the QA role is allowed read access to production_db, but write access requires approval. Since the request is for write access on a high-risk resource (production_db), it must be escalated for approval. | Tool: request_approval | User Input: QA need write access to production db
+2026-05-15 19:14:28,783 | INFO | Received request: QA need read access to test db
+2026-05-15 19:14:28,783 | INFO | Updating conversation state
+2026-05-15 19:14:30,182 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:14:30,183 | INFO | Retrieving policy documents
+2026-05-15 19:14:32,241 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:14:32,242 | INFO | Request type detected: access_request
+2026-05-15 19:14:32,243 | INFO | Applying adaptive behavior checks
+2026-05-15 19:14:32,243 | INFO | APPROVED | Risk: low | Reason: Behavior adapted based on previous feedback indicating qa read access to test_db is acceptable. | User Input: QA need read access to test db
+2026-05-15 19:14:32,243 | INFO | APPROVED | Risk: low | User Input: QA need read access to test db
+2026-05-15 19:14:42,951 | INFO | Received request: Dev need read access to test db 
+2026-05-15 19:14:42,951 | INFO | Updating conversation state
+2026-05-15 19:14:43,812 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:14:43,813 | INFO | Retrieving policy documents
+2026-05-15 19:14:46,168 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:14:46,169 | INFO | Request type detected: access_request
+2026-05-15 19:14:46,170 | INFO | Applying adaptive behavior checks
+2026-05-15 19:14:46,170 | INFO | APPROVED | Risk: low | Reason: As per policy P3, the Developer role is allowed read access to test_db. The request is compliant with the policy and poses low risk. | User Input: Dev need read access to test db 
+2026-05-15 19:14:46,170 | INFO | APPROVED | Risk: low | User Input: Dev need read access to test db 
+2026-05-15 19:17:59,644 | INFO | Received request: 
+2026-05-15 19:17:59,644 | INFO | Updating conversation state
+2026-05-15 19:18:00,826 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:18:00,828 | INFO | Retrieving policy documents
+2026-05-15 19:18:03,490 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:18:03,493 | INFO | Request type detected: request_clarification
+2026-05-15 19:18:03,494 | INFO | Applying adaptive behavior checks
+2026-05-15 19:18:03,496 | INFO | APPROVED | Risk: unknown | Reason: Missing required attributes: role, access type, and resource are not provided. | User Input: 
+2026-05-15 19:18:03,497 | WARNING | REQUEST_CLARIFICATION | Risk: unknown | Reason: Missing required attributes: role, access type, and resource are not provided. | User Input: 
+2026-05-15 19:18:03,500 | INFO | Received request: 
+2026-05-15 19:18:03,500 | INFO | Updating conversation state
+2026-05-15 19:18:05,537 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:18:05,539 | INFO | Retrieving policy documents
+2026-05-15 19:18:07,370 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:18:07,374 | INFO | Request type detected: request_clarification
+2026-05-15 19:18:07,375 | INFO | Applying adaptive behavior checks
+2026-05-15 19:18:07,377 | INFO | APPROVED | Risk: unknown | Reason: Missing required attributes: role, access type, and resource. | User Input: 
+2026-05-15 19:18:07,378 | INFO | Received request: 
+2026-05-15 19:18:07,378 | INFO | Updating conversation state
+2026-05-15 19:18:08,813 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:18:08,815 | INFO | Retrieving policy documents
+2026-05-15 19:18:19,496 | INFO | Received request: User logged in from Europe and India within one hour
+2026-05-15 19:18:19,496 | INFO | Updating conversation state
+2026-05-15 19:18:20,299 | INFO | Loading faiss with AVX2 support.
+2026-05-15 19:18:20,324 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 19:18:21,103 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:18:21,108 | INFO | Retrieving policy documents
+2026-05-15 19:18:24,380 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:18:24,389 | INFO | Request type detected: anomaly_detection
+2026-05-15 19:18:24,391 | INFO | Applying adaptive behavior checks
+2026-05-15 19:18:24,393 | INFO | APPROVED | Risk: high | Reason: User logged in from two different geographical locations (Europe and India) within one hour, indicating potential account compromise or unusual behavior. This matches anomaly detection policies and requires escalation to SecOps. | User Input: User logged in from Europe and India within one hour
+2026-05-15 19:18:24,393 | WARNING | ESCALATION TRIGGERED | Risk: high | Reason: User logged in from two different geographical locations (Europe and India) within one hour, indicating potential account compromise or unusual behavior. This matches anomaly detection policies and requires escalation to SecOps. | Tool: escalate_to_secops | User Input: User logged in from Europe and India within one hour
+2026-05-15 19:18:57,576 | INFO | Received request: use delete database tool
+2026-05-15 19:18:57,576 | INFO | Updating conversation state
+2026-05-15 19:18:57,579 | ERROR | SECURITY VIOLATION DETECTED | Unsafe Request: use delete database tool
+2026-05-15 19:19:38,907 | INFO | Received request: simulate failure
+2026-05-15 19:19:38,907 | INFO | Updating conversation state
+2026-05-15 19:19:40,461 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:19:40,464 | INFO | Retrieving policy documents
+2026-05-15 19:19:40,465 | ERROR | Runtime error: Simulated runtime failure | Latency: 1.56s
+2026-05-15 19:52:04,603 | INFO | Received request: 
+2026-05-15 19:52:04,603 | INFO | Updating conversation state
+2026-05-15 19:52:07,211 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:52:07,213 | INFO | Retrieving policy documents
+2026-05-15 19:52:27,397 | INFO | Received request: I need access 
+2026-05-15 19:52:27,398 | INFO | Updating conversation state
+2026-05-15 19:52:28,348 | INFO | Loading faiss with AVX2 support.
+2026-05-15 19:52:28,375 | INFO | Successfully loaded faiss with AVX2 support.
+2026-05-15 19:52:29,262 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:52:29,264 | INFO | Retrieving policy documents
+2026-05-15 19:52:32,648 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:52:32,661 | INFO | Request type detected: access_request
+2026-05-15 19:52:32,662 | INFO | Applying adaptive behavior checks
+2026-05-15 19:52:32,664 | INFO | APPROVED | Risk: unknown | Reason: Role and access type are missing, which are required to evaluate the access request against the policies. | User Input: I need access 
+2026-05-15 19:52:32,664 | WARNING | REQUEST_CLARIFICATION | Risk: unknown | Reason: Role and access type are missing, which are required to evaluate the access request against the policies. | User Input: I need access 
+2026-05-15 19:52:35,895 | INFO | Received request: QA
+2026-05-15 19:52:35,896 | INFO | Updating conversation state
+2026-05-15 19:52:38,484 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:52:38,488 | INFO | Retrieving policy documents
+2026-05-15 19:52:41,660 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:52:41,662 | INFO | Request type detected: access_request
+2026-05-15 19:52:41,664 | INFO | Applying adaptive behavior checks
+2026-05-15 19:52:41,666 | INFO | APPROVED | Risk: unknown | Reason: Access type is missing, which is required to evaluate the access request against the policies. | User Input: QA
+2026-05-15 19:52:41,666 | WARNING | REQUEST_CLARIFICATION | Risk: unknown | Reason: Access type is missing, which is required to evaluate the access request against the policies. | User Input: QA
+2026-05-15 19:52:45,436 | INFO | Received request: write access
+2026-05-15 19:52:45,436 | INFO | Updating conversation state
+2026-05-15 19:52:47,392 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:52:47,395 | INFO | Retrieving policy documents
+2026-05-15 19:52:51,064 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:52:51,066 | INFO | Request type detected: access_request
+2026-05-15 19:52:51,068 | INFO | Applying adaptive behavior checks
+2026-05-15 19:52:51,069 | INFO | APPROVED | Risk: medium | Reason: Access type is unclear; the user provided 'write access' but did not specify the resource. Resource is required to evaluate the access request against the policies. | User Input: write access
+2026-05-15 19:52:51,070 | WARNING | REQUEST_CLARIFICATION | Risk: medium | Reason: Access type is unclear; the user provided 'write access' but did not specify the resource. Resource is required to evaluate the access request against the policies. | User Input: write access
+2026-05-15 19:52:57,234 | INFO | Received request: test db
+2026-05-15 19:52:57,234 | INFO | Updating conversation state
+2026-05-15 19:52:58,246 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:52:58,248 | INFO | Retrieving policy documents
+2026-05-15 19:53:01,122 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:53:01,142 | INFO | Request type detected: access_request
+2026-05-15 19:53:01,144 | INFO | Applying adaptive behavior checks
+2026-05-15 19:53:01,145 | INFO | APPROVED | Risk: medium | Reason: Behavior adapted based on previous feedback indicating qa write access to test_db is acceptable. | User Input: test db
+2026-05-15 19:53:01,146 | INFO | APPROVED | Risk: medium | User Input: test db
+2026-05-15 19:53:06,740 | INFO | Received request: QA
+2026-05-15 19:53:06,740 | INFO | Updating conversation state
+2026-05-15 19:53:07,974 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:53:07,976 | INFO | Retrieving policy documents
+2026-05-15 19:53:11,252 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:53:11,255 | INFO | Request type detected: access_request
+2026-05-15 19:53:11,256 | INFO | Applying adaptive behavior checks
+2026-05-15 19:53:11,258 | INFO | APPROVED | Risk: medium | Reason: Behavior adapted based on previous feedback indicating qa write access to test_db is acceptable. | User Input: QA
+2026-05-15 19:53:11,258 | INFO | APPROVED | Risk: medium | User Input: QA
+2026-05-15 19:53:34,087 | INFO | Received request: QA need write access to production db
+2026-05-15 19:53:34,088 | INFO | Updating conversation state
+2026-05-15 19:53:35,419 | INFO | HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-05-15 19:53:35,421 | INFO | Retrieving policy documents
+2026-05-15 19:53:38,184 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-15 19:53:38,187 | INFO | Request type detected: access_request
+2026-05-15 19:53:38,190 | INFO | Applying adaptive behavior checks
+2026-05-15 19:53:38,192 | INFO | APPROVED | Risk: high | Reason: The user (QA) is requesting write access to the production_db, which is a high-risk resource. As per policy P2, QA is only allowed read access to production_db, and any write access requires approval. Therefore, this request must be escalated for approval. | User Input: QA need write access to production db
+2026-05-15 19:53:38,192 | WARNING | ESCALATION TRIGGERED | Risk: high | Reason: The user (QA) is requesting write access to the production_db, which is a high-risk resource. As per policy P2, QA is only allowed read access to production_db, and any write access requires approval. Therefore, this request must be escalated for approval. | Tool: request_approval | User Input: QA need write access to production db
